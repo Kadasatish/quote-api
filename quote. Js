@@ -1,0 +1,11 @@
+export default function handler(req, res) {
+  const quotes = [
+    "బుద్ధి ఉన్నవాడు చర్యలతో మాట్లాడతాడు.",
+    "జయాలు ప్రయత్నంలో మొదలవుతాయి.",
+    "సమయం విలువైనది, వృథా చేయవద్దు.",
+    "పని చేస్తేనే ఫలితం ఉంటుంది."
+  ];
+
+  const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+  res.status(200).json({ quote: randomQuote });
+}
